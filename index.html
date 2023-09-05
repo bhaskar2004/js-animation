@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/main.css">
+   
+</head>
+<body>
+    
+    <div class="container">
+        <div class="inner">
+        <h1>Fill it out</h1>
+        <p>Please fill out the below because that's what we really need you to do</p>
+       
+        <form>
+            <span class="msg">Full name pleas!</span>
+            <input type="text" placeholder="Name" class="txtfld">
+            <input type="text" placeholder="Email Address" class="txtfld">
+            <input type="submit" value="Enter info" class="btn">
+        </form>
+        </div>
+    </div>
+
+
+   <script src="https://unpkg.com/popmotion/dist/popmotion.global.min.js"></script> 
+   <script>
+      const container =  popmotion.styler(document.querySelector('.container'))
+      const formElements =  document.querySelector('.inner')
+      const msgPop =  popmotion.styler(document.querySelector('.msg'))
+      popmotion.tween({
+        from: {
+            scale: .7
+        },
+        to: {
+            scale: 1
+        },
+        duration: 1000
+      }).start(container.set)
+   </script>
+</body>
+</html>
